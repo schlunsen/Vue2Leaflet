@@ -55,7 +55,7 @@ const props = {
 export default {
   props: props,
   mounted() {
-    const options = this.options;
+    const options = Object.assign({}, this.options);
     
     if (this.icon) {
       options.icon = this.icon;
