@@ -105,8 +105,8 @@ export default {
       worldCopyJump: this.worldCopyJump,
       crs: this.crs,
     };
-    options = Object.merge(this.options, options)
-    
+    options = Object.assign(this.options, options)
+
     if (this.center != null) {
       options.center = this.center;
     }
