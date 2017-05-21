@@ -90,6 +90,10 @@ const props = {
     custom: true,
     default: () => L.CRS.EPSG3857,
   },
+  options: {
+    type: Object,
+    default: {},
+  },
 };
 
 export default {
@@ -101,6 +105,8 @@ export default {
       worldCopyJump: this.worldCopyJump,
       crs: this.crs,
     };
+    options = Object.merge(this.options, options)
+    
     if (this.center != null) {
       options.center = this.center;
     }
